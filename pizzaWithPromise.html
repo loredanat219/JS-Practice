@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza with promise</title>
+</head>
+<body>
+    <script>
+        function orderPizza(pizzaSize, toppings) {
+            return new Promise ((resolve, reject) => {
+                console.log('Am retinut comanda', pizzaSize, toppings);
+                console.log('They are preparing the pizza');
+                setTimeout(() => {
+                    console.log("It's been 20 min, we are now delivering the pizza");
+                    resolve("quatro formaggi");
+                }, 5000);
+            });
+        }
+    </script>
+</body>
+</html>

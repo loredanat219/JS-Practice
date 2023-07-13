@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        function orderPizza(pizzaSize, toppings, callMeMaybe ) {
+            console.log("Am retinut comanda", pizzaSize, toppings); 
+            console.log("They are preparing the pizza");
+            setTimeout( () => {
+                console.log("It's been 20 min, we are now delivering the pizza");
+                callMeMaybe("quatro formaggi");
+
+            },  5000)
+           
+        }
+
+
+        function eatPizza(pizza) {
+            console.log('Hei, I am eating this pizza', pizza);
+        }
+
+        orderPizza(23, "cheddar", eatPizza);
+
+        console.log("I'm cleaning the room");
+        console.log("I'm watching  TV");
+
+       
+
+
+    </script>
+</body>
+</html>

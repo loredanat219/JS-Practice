@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      //creating a promise
+      const myPromise = new Promise((resolve, reject) => {
+        //Simulating an asynchronous task
+        setTimeout(() => {
+          const data = "Promissed resolved with some data";
+          //Resolving the promise with data
+
+          resolve(data);
+          // Rejecting the promise (uncomment the following line to see rejection in action)
+          reject(new Error('Promise rejected with an error.'));
+        }, 200);
+      });
+
+      // Consuming the Promise
+      myPromise
+        .then((result) => {
+          console.log("Promise resolved", result);
+        })
+        .catch((error) => {
+          console.log("promise rejected", error);
+        });
+    </script>
+  </body>
+</html>
